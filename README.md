@@ -1,2 +1,24 @@
-# yolov5-obj-distance-measure
-yolov5-obj-distance-measure.You can change code in yolov5.
+# 简介
+
+基于地面假设的单目测距，核心代码文件
+
+由于yolov5的代码在不断更新，在这里放出核心部分的代码，原理十分简单，我告诉大家怎么用
+
+首先我是使用yolov5完成这个功能的，你要先配置好yolov5
+
+# 计算距离.py
+
+这个文件中是计算距离的函数，设置好相机内参，高度，还有角度即可，把中文名改了，改个英文的，方便你调用这个文件
+
+这里的函数会同时绘制出结果
+
+# depth_detect_in_cam.py
+
+这个文件是从yolov5的detect.py改的，就是把上面计算距离的函数import进来，我是在131行调用的。你需要根据最新的yolov5代码，放置并调用测距函数
+
+yolov5版本经常更新，我不建议你把这个文件直接放到yolov5的文件夹里使用，而是自己修改detect.py,添加计算距离.py中的测距函数
+
+
+# 参考
+
+[视频](https://www.bilibili.com/video/BV1oh411a71G)
